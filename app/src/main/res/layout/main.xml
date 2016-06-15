@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_scrollview"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:scrollbarAlwaysDrawVerticalTrack="true">
+
+        <TextView
+            android:id="@+id/summary"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/summary"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/summary"
+            android:background="@drawable/black_white_gradient"
+            android:visibility="gone" />
+
+        <CheckBox
+            android:id="@+id/backup_all_numbers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="backup_all_numbers"
+            android:text="@string/main_result_for_all_numbers"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/specific_numbers_to_backup_label"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/main_result_for_specified_numbers"
+            android:visibility="gone" />
+        <!--
+        <LinearLayout android:id="@+id/specific_numbers_to_backup_linear_layout"
+                      android:orientation="horizontal"
+                      android:layout_width="fill_parent"
+                      android:layout_height="fill_parent"
+                      android:layout_below="@id/specific_numbers_to_backup_label" >
+        </LinearLayout>
+        -->
+        <EditText
+            android:id="@+id/specific_numbers_to_backup_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/select_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_result_select_contact"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/divider_2"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/specific_numbers_to_backup_edit"
+            android:background="@drawable/black_white_gradient"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/what_to_backup_label"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/main_result_what_to_backup"
+            android:visibility="gone" />
+
+        <CheckBox
+            android:id="@+id/backup_messages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:contentDescription="backup_messages"
+            android:text="@string/main_result_backup_messages"
+            android:visibility="gone" />
+
+        <CheckBox
+            android:id="@+id/backup_mms_attachments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="backup_mms_attachments"
+            android:text="@string/main_result_backup_mms_attachments"
+            android:visibility="gone" />
+
+        <CheckBox
+            android:id="@+id/backup_call_records"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="backup_call_records"
+            android:text="@string/main_result_backup_call_records"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/dividers"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/backup_call_records"
+            android:background="@drawable/black_white_gradient"
+            android:visibility="gone" />
+        <!-- Make all options invisible for now -->
+        <TextView
+            android:id="@+id/options_post_backup_label"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/main_result_options_post_backup_label"
+            android:visibility="gone" />
+
+        <CheckBox
+            android:id="@+id/delete_after_backup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="delete_after_backup"
+            android:text="@string/main_result_delete_after_backup"
+            android:visibility="gone" />
+        <!--
+        <TextView android:id="@+id/share_archive_label"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:text="Send backup below" />
+        -->
+        <CheckBox
+            android:id="@+id/share_archive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:contentDescription="share_archive"
+            android:text="@string/main_result_share_archive"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/divider_3"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/share_archive"
+            android:background="@drawable/black_white_gradient" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/run_backup"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/about_app"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about_app"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/exit_app"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/exit_app"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/random_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="random_question"
+            android:text="@string/main_result_random_question"
+            android:visibility="gone" />
+    </LinearLayout>
+</ScrollView>
